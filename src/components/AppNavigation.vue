@@ -10,10 +10,14 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn text @click="toAbout">About</v-btn>
-        <v-btn text @click="toSignUp">Sign Up</v-btn>
-        <v-btn text @click="toLogin">
+        <v-btn v-if="!isAuthenticated" text @click="toSignUp">Sign Up</v-btn>
+        <v-btn v-if="!isAuthenticated" text @click="toLogin">
           Login
           <v-icon right>mdi-arrow-right</v-icon>
+        </v-btn>
+        <v-btn text v-if="isAuthenticated" @click="logout">
+          Logout
+          <v-icon right>mdi-arrow-left</v-icon>
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -40,6 +44,14 @@ export default {
     },
     toLogin() {
       this.$router.push("/login");
+    },
+    logout() {
+      this.$store.dispatch("userSignOut");
+    }
+  },
+  computed: {
+    isAuthenticated() {
+      return this.$store.getters.isAuthenticated;
     }
   }
 };
