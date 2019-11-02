@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar app dark>
+    <v-toolbar app color="blue darken-4" dark height="75px">
       <router-link to="/">
         <v-toolbar-title @click="toHome" class="headline text-uppercase">
           <span>Duke</span>
@@ -9,9 +9,9 @@
       </router-link>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn text @click="toContact">Contact</v-btn>
         <v-btn text @click="toAbout">About</v-btn>
-        <v-btn text>
+        <v-btn text @click="toSignUp">Sign Up</v-btn>
+        <v-btn text @click="toLogin">
           Login
           <v-icon right>mdi-arrow-right</v-icon>
         </v-btn>
@@ -32,11 +32,14 @@ export default {
     toHome() {
       this.$router.push("/");
     },
-    toContact() {
-      this.$router.push("/contact");
+    toSignUp() {
+      this.$router.push("/signup");
     },
     toAbout() {
       this.$router.push("/about");
+    },
+    toLogin() {
+      this.$router.push("/login");
     }
   }
 };
