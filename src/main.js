@@ -4,8 +4,11 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 import "@/firebase/";
+import { firestorePlugin } from "vuefire";
 
 Vue.config.productionTip = false;
+
+Vue.use(firestorePlugin);
 
 new Vue({
   router,
