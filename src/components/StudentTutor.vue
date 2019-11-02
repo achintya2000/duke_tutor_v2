@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-layout row wrap align-center>
+  <v-container fill-height class="my-10">
+    <v-layout align-center justify-center>
       <v-flex>
         <v-card class="mx-auto" max-width="400">
           <v-img

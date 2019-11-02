@@ -9,6 +9,7 @@
       </router-link>
       <v-spacer></v-spacer>
       <v-toolbar-items>
+        <v-btn text v-if="isAuthenticated">View Profile</v-btn>
         <v-btn text @click="toAbout">About</v-btn>
         <v-btn v-if="!isAuthenticated" text @click="toSignUp">Sign Up</v-btn>
         <v-btn v-if="!isAuthenticated" text @click="toLogin">
