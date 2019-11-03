@@ -35,11 +35,11 @@ const routes = [
     component: () => import("../views/test.vue")
   },
   {
-<<<<<<< HEAD
     path: "/googletest",
     name: "googletest",
     component: () => import("../views/test3.vue")
-=======
+  },
+  {
     path: "/StudentDB",
     name: "StudentDB",
     component: () => import("../views/StudentDB.vue")
@@ -53,7 +53,6 @@ const routes = [
     path: "/ChooseClass",
     name: "ChooseClass",
     component: () => import("../views/ChooseClass.vue")
->>>>>>> 3e473d0f7a96a2ac3ada7b5188335603756de6a6
   }
 ];
 
