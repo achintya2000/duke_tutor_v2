@@ -1,6 +1,7 @@
 import firebase from "firebase";
 import "firebase/firestore";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyCFnLaRqYV2tSULentOsoJWRVl_PjyWQ7A",
   authDomain: "duke-tutor-v2.firebaseapp.com",

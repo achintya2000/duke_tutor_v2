@@ -33,6 +33,11 @@ const routes = [
     path: "/testing",
     name: "testing",
     component: () => import("../views/test.vue")
+  },
+  {
+    path: "/googletest",
+    name: "googletest",
+    component: () => import("../views/test3.vue")
   }
 ];
 
