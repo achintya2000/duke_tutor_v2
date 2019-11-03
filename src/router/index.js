@@ -33,6 +33,16 @@ const routes = [
     path: "/testing",
     name: "testing",
     component: () => import("../views/test.vue")
+  },
+  {
+    path: "/StudentDB",
+    name: "StudentDB",
+    component: () => import("../views/StudentDB.vue")
+  },
+  {
+    path: "/ClassDB",
+    name: "ClassDB",
+    component: () => import("../views/ClassDB.vue")
   }
 ];
 
