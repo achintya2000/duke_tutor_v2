@@ -1,0 +1,10 @@
+Student flow:
+home -(get started)-> class select -(pick class)-> calendar for specific class -(form filled)-> email sent with feedback form
+
+Tutor flow (first time):
+home -(sign up)-> sign up -(input email, password, and class code)-> profile page with calendar and ability to set up times 
+-(email sent when student requests session)-> email sent with feedback form 
+
+Tutor flow (already registered):
+home -(view profile)-> profile page with calendar and ability to set up times 
+-(email sent when student requests session)-> email sent with feedback form 

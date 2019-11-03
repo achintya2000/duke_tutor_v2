@@ -1,16 +1,16 @@
 <template>
   <div>
-    <h1>Hi</h1>
+    <h1>Students</h1>
     <article v-for="(user, idx) in users" :key="idx">
       <h1>{{ user.name }}</h1>
-      <h2>{{ user.major }}</h2>
+      <h2>{{ user.learn }}</h2>
       <v-btn @click="deleteLocation(user.id)">Delete</v-btn>
     </article>
 
-    <form @submit="addSomeone(name, major)">
+    <form @submit="addStudent(name, learn)">
       <input v-model="name" placeholder="Name" />
-      <input v-model="major" placeholder="Major" />
-      <v-btn type="submit">Add New Person</v-btn>
+      <input v-model="learn" placeholder="Learn" />
+      <v-btn @click="addSomeone(name,learn)">Add New Student</v-btn>
     </form>
   </div>
 </template>
@@ -19,30 +19,28 @@
 import db from "../firebase/index";
 
 export default {
-  name: "testing",
+  name: "StudentDB",
   data() {
     return {
       users: [],
       name: "",
-      major: ""
+      learn: ""
     };
   },
   firestore() {
     return {
-      users: db.collection("users").orderBy("createdAt")
+      users: db.collection("students").orderBy("name")
     };
   },
   methods: {
-    addSomeone(name, major) {
-      const created = new Date();
-      db.collection("users").add({
+    addSomeone(name, learn) {
+      db.collection("students").add({
         name: name,
-        major: major,
-        createdAt: created
+        learn: learn,
       });
     },
     deleteLocation(id) {
-      db.collection("users")
+      db.collection("students")
         .doc(id)
         .delete();
     }
