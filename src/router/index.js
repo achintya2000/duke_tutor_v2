@@ -43,6 +43,11 @@ const routes = [
     path: "/ClassDB",
     name: "ClassDB",
     component: () => import("../views/ClassDB.vue")
+  },
+  {
+    path: "/ChooseClass",
+    name: "ChooseClass",
+    component: () => import("../views/ChooseClass.vue")
   }
 ];
 
